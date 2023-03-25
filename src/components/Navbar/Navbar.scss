@@ -307,3 +307,53 @@ body {
         }
     }
 }
+
+
+
+@media(max-width: 1200px) {
+ 
+}
+
+@media(max-width: 992px) {
+    .nav{
+        &__wrapper {
+           &__middle {
+               width: 60%;
+   
+               span {
+                   input {
+                       width: 100% !important;
+                   }
+               }
+   
+           }
+   
+           &__right {
+               width: 1%;
+           }
+       }
+     }
+}
+
+@media(max-width: 544px) {
+  .nav{
+     &__wrapper {
+        align-items: self-start;
+        flex-direction: column;
+        &__middle {
+            width: 100%;
+            margin-bottom: 15px;
+            span {
+                input {
+                    width: 100% !important;
+                }
+            }
+
+        }
+
+        &__right {
+            width: 1%;
+        }
+    }
+  }
+}

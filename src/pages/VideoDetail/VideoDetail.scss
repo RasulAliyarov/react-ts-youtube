@@ -2,13 +2,16 @@
     height: 100%;
     display: flex;
     margin-top: 15px;
-    width: 100% !important;
+    width: 100% ;
     padding: 0 12px;
     gap: 20px;
+
     &__left {
+        
         &__info {
             color: white;
             margin-top: 10px;
+
             h1 {
                 font-size: 20px;
                 line-height: 24px;
@@ -70,20 +73,95 @@
         }
     }
 
-    &__right{
+    &__right {
         display: flex;
         flex-wrap: wrap;
+
         // width: 100%;
-        .list{
+        .list {
             display: flex;
             justify-content: flex-end;
             width: 100%;
-            .videoCard{
+
+            .videoCard {
                 display: block;
-                width: 380px ;
-                img{
-                    max-height: 210px ;
+                width: 380px;
+
+                img {
+                    max-height: 210px;
                 }
+            }
+        }
+    }
+}
+
+@media(max-width: 1200px) {
+    .videoDetail {
+        width: 100%;
+
+        iframe {
+            width: 100% !important;
+        }
+
+        &__left {
+            width: 100% !important;
+        }
+
+        &__right {
+            width: 50%;
+        }
+
+        .list {
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width: 992px) {
+    .videoDetail {
+        display: flex;
+        flex-wrap: wrap;
+        width: 97%;
+        iframe {
+            width: 100% !important;
+            height: 100% !important;
+        }
+        &__right {
+            width: 100%;
+            .list {
+                .videoCard {
+                    width: 49%;
+                }
+            }
+
+            .list {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media(max-width: 544px) {
+    .videoDetail {
+        display: flex;
+        flex-wrap: wrap;
+        padding: unset;
+        &__right {
+            width: 100%;
+
+            .list {
+                .videoCard {
+                    width: 100%;
+                    &__top{
+                        img{
+                            height: unset;
+                        }
+                    }
+                }
+            }
+
+            .list {
+                width: 100%;
             }
         }
     }

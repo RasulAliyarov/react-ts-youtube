@@ -1,16 +1,16 @@
 .list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
     row-gap: 30px;
 }
 
 .videoCard {
     cursor: pointer;
-    width: 300px;
+    width: 290px;
     position: relative;
     transition: .4s;
-    
+
     &__top {
         border-radius: 15px;
         border-radius: 15px;
@@ -24,7 +24,8 @@
     }
 
     &__bottom {
-        padding:10px 5px 5px 0;
+        padding: 10px 5px 5px 0;
+
         &__left {}
 
         &__right {
@@ -67,11 +68,64 @@
 
     &:hover {
         transition: .4s;
-        .videoCard__bottom{
+
+        .videoCard__bottom {
             background-color: #252525;
         }
+
         .videoCard__top {
             border-radius: 0;
+        }
+    }
+}
+
+@media(max-width:1200px) {
+    .home{
+        padding: unset !important;
+    }
+    .videoCard {
+        width: 23%;
+
+        &__top {
+            img {
+                width: 100%;
+                height: 185.63px;
+            }
+        }
+    }
+}
+
+@media(max-width: 992px) {
+    .list{
+        justify-content: center;
+    }
+    .videoCard {
+        width: 30.3333%;
+        &__top{
+            img{
+                max-height: 156px;
+            }
+        }
+    }
+}
+
+@media(max-width: 778px) {
+    .videoCard {
+        width: 48%;
+        &__top{
+            img{
+                max-height: unset !important;
+            }
+        }
+    }
+}
+@media(max-width: 488px) {
+    .videoCard {
+        width: 100%;
+        &__top{
+            img{
+                height: unset;
+            }
         }
     }
 }

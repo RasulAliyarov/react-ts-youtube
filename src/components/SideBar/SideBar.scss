@@ -3,7 +3,6 @@
 
     &__content {
         display: flex;
-        // gap: 24px;
     }
 }
 
@@ -11,14 +10,15 @@
     min-width: 260px;
     position: absolute;
     left: 0;
-    top: 0;
-    z-index: 999;
+    top: 55px;
+    z-index: 99999;
     padding: 0 10px;
+
     &__wrapper {
         min-width: 260px;
         position: fixed;
         min-height: 100vh;
-        background-color: #0f0f0f ;
+        background-color: #0f0f0f;
 
         ul {
             li {
@@ -46,4 +46,20 @@
 
 .sideBarNone {
     display: none;
+}
+
+@media(max-width: 992px) {
+    .sideBar {
+        top: 55px;
+    }
+}
+@media(max-width: 544px) {
+    .sideBar {
+        min-width: 60% !important;
+        top: 55px;
+
+        &__wrapper {
+            min-width: 60% !important;
+        }
+    }
 }
