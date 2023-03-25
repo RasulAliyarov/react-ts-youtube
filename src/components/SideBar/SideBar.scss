@@ -1,0 +1,49 @@
+.layout {
+    padding-top: 80px;
+
+    &__content {
+        display: flex;
+        // gap: 24px;
+    }
+}
+
+.sideBar {
+    min-width: 260px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    padding: 0 10px;
+    &__wrapper {
+        min-width: 260px;
+        position: fixed;
+        min-height: 100vh;
+        background-color: #0f0f0f ;
+
+        ul {
+            li {
+                padding: 10px 12px;
+                color: #f1f1f1;
+                cursor: pointer !important;
+                font-weight: 400;
+                display: flex;
+                align-items: center;
+
+                svg {
+                    margin-right: 24px;
+                    font-size: 20px;
+                }
+
+                &:hover {
+                    border-radius: 10px;
+                    width: 90%;
+                    background-color: #464646;
+                }
+            }
+        }
+    }
+}
+
+.sideBarNone {
+    display: none;
+}

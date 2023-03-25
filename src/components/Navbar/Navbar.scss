@@ -1,0 +1,309 @@
+body {
+    background-color: #0f0f0f;
+}
+
+.nav {
+    width: 100%;
+    padding: 5px 0;
+    z-index: 9999;
+    background-color: #0f0f0f;
+    position: fixed;
+    top: 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__left {
+            display: flex;
+            align-items: center;
+
+            svg {
+                font-size: 26px;
+                margin-right: 5px;
+                color: white;
+                cursor: pointer;
+                margin-left: 4px;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+
+                img {
+                    width: 65px;
+                }
+
+                span {
+                    color: white;
+                    font-size: 18px;
+                    font-family: sans-serif;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        &__middle {
+            width: 30%;
+
+            span {
+                position: relative;
+
+                input {
+                    width: 100%;
+                    padding: 10px 35px 10px 20px;
+                    border: 0;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    background: none;
+                    border: 1px solid rgba(151, 151, 151, 0.4);
+                    transition: .4s;
+                    position: relative;
+                    z-index: 9;
+                    color: rgba(255, 255, 255, 0.6);
+                    opacity: .6;
+
+                    &:focus {
+                        outline: none;
+                        cursor: auto;
+                    }
+
+                    &:hover {
+                        opacity: 1;
+                        transition: .4s;
+                    }
+                }
+
+                svg {
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    color: rgba(255, 255, 255, 0.6);
+
+
+                }
+
+                [placeholder~="Enter a request"] {
+                    font-size: 16px;
+                    color: white;
+                }
+            }
+
+            // .searchInput {
+            //     position: relative;
+            //     width: 100%;
+            //     margin: 0 20px 0 20px;
+
+            //     .cameraIcon {
+            //         position: absolute;
+            //         top: 50%;
+            //         right: 3%;
+            //         transform: translateY(-50%);
+            //         transition: .3s;
+            //         opacity: .6;
+            //         z-index: 10;
+
+            //         svg {
+            //             font-size: 20px;
+            //             color: white;
+            //         }
+            //     }
+
+            //     .searchIcon {
+            //         position: absolute;
+            //         top: 50%;
+            //         left: 2%;
+            //         transform: translateY(-50%);
+            //         opacity: .6;
+            //         transition: .3s;
+            //         z-index: 10;
+
+            //         svg {
+            //             font-size: 23px;
+            //             color: white;
+            //         }
+            //     }
+
+            //     span {
+            //         cursor: pointer;
+
+            //         &:hover {
+            //             opacity: 1;
+            //             transition: .3s;
+            //         }
+            //     }
+
+            //     input {
+            //         width: 100%;
+            //         padding: 20px 15px 20px 40px;
+            //         border: 0;
+            //         border-radius: 25px;
+            //         opacity: .2;
+            //         cursor: pointer;
+            //         transition: .4s;
+            //         position: relative;
+            //         z-index: 9;
+
+            //         &:focus {
+            //             outline: none;
+            //             cursor: auto;
+
+            //         }
+
+            //         &:hover {
+            //             opacity: .5;
+            //             transition: .4s;
+            //         }
+            //     }
+
+            //     [placeholder~="ищу..."] {
+            //         font-size: 16px;
+            //     }
+
+
+            //     .react-datalist-input__listbox {
+            //         background-color: white;
+            //         width: 100%;
+            //         border-radius: 25px;
+            //         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            //         z-index: 5;
+            //         padding: 60px 4px 13px 8px;
+            //         position: absolute;
+            //         top: 0;
+            //         margin: 0 !important;
+            //         display: flex;
+            //         flex-direction: column;
+            //     }
+
+            //     .react-datalist-input__textbox {
+            //         z-index: 5;
+
+            //         &:focus {
+            //             svg {
+
+            //                 color: black !important;
+            //             }
+            //         }
+            //     }
+
+            //     .react-datalist-input__listbox {
+            //         z-index: 4;
+
+            //         .react-datalist-input__listbox-option {
+            //             margin: 0;
+            //             padding: 6px 8px 8px 30px;
+            //             display: flex;
+            //             align-items: center;
+            //             transition: .4s;
+            //             cursor: pointer;
+            //             // background: url(../../../images/Icons/Search8.svg);
+            //             background-size: 16px;
+            //             background-repeat: no-repeat;
+            //             background-position: 4px center;
+            //             opacity: .8;
+
+            //             &:hover {
+            //                 background-color: rgb(232, 232, 232);
+            //                 transition: .4s;
+            //                 border-radius: 10px;
+            //             }
+
+            //         }
+            //     }
+            // }
+        }
+
+        &__right {
+            width: 10%;
+        }
+    }
+
+    .UpToTop {
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        z-index: 1000;
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: .4s;
+
+        img {
+            width: 65px;
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+            transition: .4s;
+        }
+    }
+}
+
+.changeColor {
+    background-color: white;
+    color: #0f0f0f !important;
+
+    h1,
+    h2,
+    p,
+    h3 {
+        color: #0f0f0f;
+    }
+
+    span {
+        color: #0f0f0f !important;
+    }
+ 
+    .scrbBtn{
+        color: white;
+        svg{
+            color: white !important;
+        }
+    }
+    ul {
+        li {
+            color: #0f0f0f !important;
+
+            &:hover {
+                background-color: #c7c7c7 !important;
+            }
+        }
+    }
+
+    input {
+        color: #0f0f0f !important;
+
+        &:focus {
+            color: #0f0f0f;
+        }
+
+        [placeholder~="Enter a request"] {
+            color: #0f0f0f !important;
+        }
+    }
+    .videoCard__bottom__right__author {
+        &:hover {
+            color: #0f0f0f;
+        }
+    }
+
+    svg {
+        color: #0f0f0f !important;
+    }
+}
+.sidebarCngCl{
+    background-color: white !important;
+}
+.tester {
+    &:hover {
+        .videoCard__bottom{
+            background-color: #d3d3d3 !important;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+.home {
+    position: relative;
+    width: 100%;
+    padding: 0 0 100px 16px;
+    min-height: 88.5vh;
+    
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__buttons {
+            margin-top: 45px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            right: 50%;
+            &__IncDecBtn {
+                background-color: #FF0000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                padding: 10px 10px;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: .4s;
+
+                svg {
+                    font-size: 26px;
+                }
+
+                &:hover {
+                    border-radius: 30px;
+                    transform: scale(1.055);
+                    box-shadow: 0 0 15px rgb(39, 39, 39);
+                    transition: .4s;
+
+                    svg {}
+                }
+            }
+        }
+    }
+
+    .preloader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        p{
+            margin-top: 10px;
+            line-height: 22px;
+        }
+        img {
+            width: 300px;
+        }
+    }
+}
