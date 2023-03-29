@@ -1,13 +1,13 @@
 .list {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
     row-gap: 30px;
+    justify-content: space-between;
 }
 
 .videoCard {
     cursor: pointer;
-    width: 290px;
+    width: 24%;
     position: relative;
     transition: .4s;
 
@@ -84,7 +84,7 @@
         padding: unset !important;
     }
     .videoCard {
-        width: 23%;
+        width: 24%;
 
         &__top {
             img {
@@ -96,9 +96,6 @@
 }
 
 @media(max-width: 992px) {
-    .list{
-        justify-content: center;
-    }
     .videoCard {
         width: 30.3333%;
         &__top{
@@ -120,6 +117,9 @@
     }
 }
 @media(max-width: 488px) {
+    .home{
+        margin-top: 50px;
+    }
     .videoCard {
         width: 100%;
         &__top{
